@@ -4,5 +4,5 @@
 ``` javascript
 const imglog = require('img-log')
 
-imgLog(imgPath, projectPath)
+imglog(imgPath, projectPath)
 ```
