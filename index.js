@@ -82,9 +82,9 @@ const imgLog = (imgPath, projectPath) => {
 
   //写入log，删除未使用图片
   const logName = `img_log_${time}.log`//log文件名
-  const logPath = path.join(__dirname, 'log')
+  const logPath = path.join(process.cwd(), 'log')
   if (listResult.some(item => item.exist === false)) {
-    const backupPath = path.join(__dirname, `Backup`)
+    const backupPath = path.join(process.cwd(), `Backup`)
     const backupImgPath = path.join(backupPath, `backup_img_${time}`)
     if (!fs.existsSync(backupPath)) {
       fs.mkdirSync(backupPath)
