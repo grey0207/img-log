@@ -1,7 +1,7 @@
 {
-  "name": "img_log",
+  "name": "img-log",
   "version": "1.0.0",
-  "description": "img_log",
+  "description": "img-log",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
