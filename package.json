@@ -1,0 +1,12 @@
+{
+  "name": "img_log",
+  "version": "1.0.0",
+  "description": "img_log",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "bobo",
+  "license": "ISC"
+}
