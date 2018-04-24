@@ -12,7 +12,6 @@ const imgLog = (imgPath, projectPath) => {
     const time = Date.now()
     const extName = new RegExp('.(gif|jpe?g|png|svg|ico)$')//扩展名正则
   
-    let unused = 0
     let count = 0
   
     /**
@@ -39,9 +38,6 @@ const imgLog = (imgPath, projectPath) => {
             exist: isExist,
             dir: list.filter(item => item.exist === true).map(item => item.dir)
           })
-          if (!isExist) {
-            unused++
-          }
           count++
         }
         else {
@@ -88,10 +84,7 @@ const imgLog = (imgPath, projectPath) => {
       //写入log
       const logName = `img_log_${time}.log`//log文件名
       const logPath = path.join(process.cwd(), 'log')
-      if (listResult.some(item => item.exist === false)) {
-        console.log(`已删除未使用图片${unused}张`)
-      }
-      
+
       if (!fs.existsSync(logPath)) {
         fs.mkdirSync(logPath)
       }
